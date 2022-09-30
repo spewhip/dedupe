@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# run this from Lpexc
+# run this from ho etc.
 
 rm -f partialmatch.txt
 
@@ -32,7 +32,7 @@ for FILE in *
                 [[ $filename =~ $lfirst ]] && [[ $filename =~ $llast ]];
                 then
                     echo "!!!!!!Fullmatch-$name!!!!!!!"
-                    mv $FILE ../ALLG/$first\ $last/$FILE
+                    mv $FILE ../../AllG/$first\ $last/$FILE
             elif
                 [[ $filename =~ $lfirst ]] || [[ $filename =~ $llast ]];
                 then
@@ -40,7 +40,7 @@ for FILE in *
                     echo $FILE >> partialmatch.txt
             fi
 
-        done < ../namelist.txt
+        done < ../../namelist.txt
     done
 
 

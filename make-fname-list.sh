@@ -1,15 +1,19 @@
 #!bin/bash
 
-# run this from ALLG
+# run this from \
 
 count=1
 
 rm -rf namelist.txt
 
+cd AllG
+
 for FILE in *
     do
-    echo "$FILE" >> namelist.txt
+    echo "$FILE" >> ../namelist.txt
     count=$((count+1))
 done
+
+cd ..
 
 cat namelist.txt
